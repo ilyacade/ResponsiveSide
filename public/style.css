@@ -74,7 +74,7 @@
 .section1{
     width: 100%;
     height: 100vh;
-    background-image: url(images/suan.jpg);
+    background-image: url(../assets/images/suan.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
