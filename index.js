@@ -51,17 +51,31 @@ dark.addEventListener("click",()=>{
     for(let i=0; i< a.length; i++){
         a[i].style.color = "#fff";
     }
+    
 })
 let menu = document.querySelector(".fa-bars");
 menu.addEventListener("click", ()=>{
-    let heads = document.querySelectorAll("a");
-    // heads[0].style.display ="block"
-    // heads[1].style.display ="block"
-    // heads[2].style.display ="block"
-    for(let i = 0; i<heads.length;i++){
-        //  heads[i].style.display ="block"
-        heads.classList.toggle("display")
-         
+    let side = document.querySelector(".side");
+    side.style.display="block";
+})
+let xmark = document.querySelector(".fa-xmark");
+xmark.addEventListener("click",()=>{
+    let side = document.querySelector(".side");
+    if(side.style.display="block"){
+        side.style.display="none";
     }
-  
+    let navbar = document.querySelector(".navbar");
+    navbar.style.display = "block";
+    side.appendChild(navbar);
+    if(window.innerWidth > 700){
+        if(side.contains(navbar)){
+            side.removeChild(navbar)
+        }
+       
+    }
+    else{
+        if(!side.contains(navbar)){
+            side.appendChild(navbar)
+        }
+    }
 })
