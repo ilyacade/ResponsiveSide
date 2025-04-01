@@ -25,6 +25,8 @@ light.addEventListener("click",()=>{
     for(let i=0; i< a.length; i++){
         a[i].style.color = "#000";
     }
+    let side = document.querySelector(".side");
+    side.classList.add("light")
 });
 dark.addEventListener("click",()=>{
     document.querySelector("footer").classList.remove("light");
@@ -51,7 +53,8 @@ dark.addEventListener("click",()=>{
     for(let i=0; i< a.length; i++){
         a[i].style.color = "#fff";
     }
-    
+    let side = document.querySelector(".side");
+    side.classList.add("dark")
 })
 let menu = document.querySelector(".fa-bars");
 menu.addEventListener("click", ()=>{
